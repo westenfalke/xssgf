@@ -1,19 +1,43 @@
-# Template repository for creating new xsh libraries
+# westenfalke/xssgf
 
-This repository is not a real [xsh](https://github.com/alexzhangs/xsh) library but a template.
+xsh Library - XSH-LIB, XSSGF a Static Site Generator Framework.
 
-This GitHub [template repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template) can be used to create a new repository with the skeleton of the [xsh library](https://github.com/xsh-lib).
+About xsh and its libraries, check out [xsh document](https://github.com/alexzhangs/xsh)
 
-Start here: https://github.com/xsh-lib/template/generate, or click the button `Use this template`.
+## Requirements
 
-The name of your repository will be the name of the new xsh library, so make sure that name is not taken already!
+1. bash
 
-Allowed characters in the name：`[a-zA-Z]`.
+    Tested with bash:
+    * 4.3.48 on Linux
+    * 3.2.57 on macOS
 
-Add a one-line description of your repository, then click "Create repository from template".
+## Dependency
 
-![Screenshot of the create repository interface](/assets/images/xsh-lib-create-from-template.png)
+1. xsh-lib/core
 
-Once created, your new repository will execute a GitHub Actions workflow that uses cookiecutter to rewrite the repository to the desired state. This make take 30 seconds or so.
+    This library depends on [xsh-lib/core](https://github.com/xsh-lib/core) which should be loaded first before to use this library.
 
-The idea of using Github Actions to rewrite the repository itself comes from this [post](https://simonwillison.net/2021/Aug/28/dynamic-github-repository-templates/), see [simonw/python-lib-template-repository](https://github.com/simonw/python-lib-template-repository) and [simonw/python-lib](https://github.com/simonw/python-lib).
+    ```bash
+    xsh load xsh-lib/core
+    ```
+
+## Installation
+
+Assume [xsh](https://github.com/alexzhangs/xsh) is already installed at your local.
+
+To load this library into `xsh` issue below command:
+
+```bash
+xsh load westenfalke/xssgf
+```
+
+The loaded library can be referred as name `xssgf`.
+
+## Usage
+
+List available utilities for this library:
+
+```bash
+xsh list xssgf
+```
